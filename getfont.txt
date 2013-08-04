@@ -1,0 +1,13 @@
+getfont: Extract embedded fonts from a postscript document.
+
+Postscript files containing imbedded fonts usually (but not always) identify them with the comments 
+"%%beginfont" and "%%endfont".  This program scans the postscript document
+and pulls out the fonts.  
+
+Usage: getfont Postscript_file [font_name ...]
+       Postscript_file is the input file containing the imbedded fonts.
+       If all font_name are omitted, all imbedded fonts will be
+       extracted, otherwise only the listed fonts.  The output files
+       will be named "font_name".afm.
+
+Requires: emx runtime libraries.
